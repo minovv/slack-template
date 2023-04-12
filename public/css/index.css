@@ -11,7 +11,7 @@
     color: yellow;
 }
 
-.lesson-four-task-four a:link {
+.lesson-four-task-four .link:link {
     color: red;
 }
 
@@ -75,16 +75,12 @@
     background-color: red;
 }
 
-.lesson-four-task-sixteen .bg-secondary:focus {
-    background: green;
+.bg-secndary:out-of-range {
+    background-color: red;
 }
 
-.lesson-four-task-sixteen .bg-secondary:out-of-range {
-    background: red;
-}
-
-.lesson-four-task-seventeen .bg-secondary:in-range {
-    background: red;
+.bg-secndary:in-range {
+    background-color: green;
 }
 
 .lesson-four-task-eighteen input:placeholder-shown {
