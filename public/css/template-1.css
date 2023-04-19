@@ -155,7 +155,7 @@
 	font-size: 19px;
 	padding: 9px;
 }
-
+/* lesson 12 Borders and Shadows */
 /* .card {
 	border: 2px solid blue;
 }
@@ -170,4 +170,20 @@
 
 h1 {
 	text-shadow: 2px 2px 5px red;
+} */
+
+/* lesson 13  */
+/* .plans_card:nth-child(2) {
+	visibility: collapse;
+}
+
+.hero_text {
+	background: #6c757d;
+	width: 300px;
+	overflow: auto;	
+	resize: both;	
+	hyphens: manual;	
+	overflow-wrap: anywhere;
+	word-break: break-word;
+	word-spacing: 10px;
 } */
