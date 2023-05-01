@@ -1,3 +1,17 @@
+:root {
+	--space-m: 12px;
+	--space-l: 24px;
+	--fontSizeS: 14px;
+	--fontSizeD: 16px;
+	--fontSizeL: 20px;
+
+	--r: #f50808;
+	--g: #0ad61b;
+	--b: #3e0eeb;
+	--rgb: var(--r), var(--g), var(--b);
+
+}
+
 .page {
 	background: #ffffff;
 	padding: 0 15px;
@@ -32,7 +46,7 @@
 
 .nav_link {
 	color: #343A40;
-	font-size: 16px;
+	font-size: var(--fontSizeD);
 	text-decoration: none;
 
 }
@@ -71,7 +85,7 @@
 }
 
 .footer_copyright {
-	font-size: 14px;
+	font-size: var(--fontSizeS);;
 	color: #6c757d;
 	display: block;
 	margin-top: 12px;
@@ -115,7 +129,7 @@
 	width: 100%;
 
 	display: inline-block;
-	font-size: 16px;
+	font-size: var(--fontSizeD);
 	padding: 10px 20px;
 
 	background: #007bff;
@@ -145,12 +159,12 @@
 
 .preview_date {
 	color: #6c757d;
-	font-size: 16px;
+	font-size: var(--fontSizeD);
 	
 }
 
 .preview_category {
-	font-size: 16px;
+	font-size: var(--fontSizeD);
 	
 }
 
@@ -168,7 +182,7 @@
 
 .preview_description {
 	color: #212529;
-	font-size: 16px;
+	font-size: var(--fontSizeD);
 }
 
 .preview_category_1 {
@@ -202,7 +216,7 @@
 }
 
 .category_button	{
-	font-size: 16px;
+	font-size: var(--fontSizeD);
 	color: #6c757d;
 
 	padding: 10px 16px;
@@ -248,7 +262,7 @@
 .post_info {
 	color: #999999;
 	font-weight: 400;
-	font-size: 16px;
+	font-size: var(--fontSizeD);
 }
 
 .post_author {
@@ -257,7 +271,7 @@
 
 .post_description {
 	font-weight: 400;
-	font-size: 16px;
+	font-size: var(--fontSizeD);
 	color: #212529;
 }
 
@@ -279,7 +293,7 @@
 .about_text {
 	color: #212529;
 	font-weight: 400;
-	font-size: 14px;
+	font-size: var(--fontSizeS);;
 
 	line-height: 170%;
 }
@@ -302,7 +316,7 @@
 
 .link_item {
 	display: block;
-	font-size: 16px;
+	font-size: var(--fontSizeD);
 	font-weight: 400;
 	text-decoration: none;
 	color: #007bff;	

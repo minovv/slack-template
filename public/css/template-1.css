@@ -1,29 +1,48 @@
+:root {
+	--space-m: 12px;
+	--space-l: 24px;
+	--fontSizeS: 14px;
+	--fontSizeD: 16px;
+	--fontSizeL: 20px;
+
+	/* --r: 0;
+	--g: 226;
+	--b: 230;
+	--color-border: rgb(var(--r), var(--g), var(--b)); */
+
+	--color-border: #dee2e6;
+
+}
+
 .page {
 	background: #ffffff;
 	padding: 0 15px;
+
+	display: flex;
+	justify-content: center;
 
 }
 
 .page_content {
 	max-width: 960px;
-	margin: 0 auto;
+	width: 100%;
+
+	display: flex;
+	flex-direction: column;
+
+	gap: 80px;
 	
 }
 
 .header {
-	padding: 24px;
-	border-bottom: 1px solid #dee2e6;
+	padding: var(--space-l);
+	border-bottom: 1px solid var(--color-border);
 }
 
 .logo {
 	font-size: 17px;
 }
 
-.divider {
-	margin: 0;
-	height: 1px;
-	background: #dee2e6;
-}
 
 .nav {
 	display: block;
@@ -32,7 +51,7 @@
 
 .nav_link {
 	color: #343A40;
-	font-size: 16px;
+	font-size: var(--fontSizeD);
 	text-decoration: none;
 
 }
@@ -48,11 +67,11 @@
 }
 
 .nav_inline > .nav_link:not(:last-child) {
-	margin-right: 24px;
+	margin-right: var(--space-l);
 }
 
 .nav_vertical > .nav_link:not(:last-child) {
-	margin-bottom: 12px;
+	margin-bottom: var(--space-m);
 }
 
 .header_nav_right {
@@ -67,21 +86,24 @@
 .footer {
 	padding: 24px 0;
 	
-	border-top: 1px solid #dee2e6;
+	border-top: 1px solid var(--color-border);
+
+	display: flex;
+	justify-content: space-between;
 }
 
 .footer_copyright {
-	font-size: 14px;
+	font-size: var(--fontSizeS);;
 	color: #6c757d;
 	display: block;
-	margin-top: 12px;
+	margin-top: var(--space-m);
 }
 
 .footer_title {
 	font-size: 20px;
 	color: #212529;
 	display: block;
-	margin-bottom: 12px;
+	margin-bottom: var(--space-m);
 }
 
 .hero_title	{
@@ -139,7 +161,7 @@
 }
 
 .card_description_item {
-	font-size: 16px;
+	font-size: var(--fontSizeD);
 	color: #212529;
 	display: block;
 	
@@ -155,35 +177,4 @@
 	font-size: 19px;
 	padding: 9px;
 }
-/* lesson 12 Borders and Shadows */
-/* .card {
-	border: 2px solid blue;
-}
 
-.card:hover {
-	outline: 2px solid blue;
-	outline-offset: 5px;
-	border-radius: 15px;
-	box-shadow: 6px 2px 5px 1px red;
-	cursor: not-allowed;
-}
-
-h1 {
-	text-shadow: 2px 2px 5px red;
-} */
-
-/* lesson 13  */
-/* .plans_card:nth-child(2) {
-	visibility: collapse;
-}
-
-.hero_text {
-	background: #6c757d;
-	width: 300px;
-	overflow: auto;	
-	resize: both;	
-	hyphens: manual;	
-	overflow-wrap: anywhere;
-	word-break: break-word;
-	word-spacing: 10px;
-} */
