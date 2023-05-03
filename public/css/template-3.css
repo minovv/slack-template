@@ -22,6 +22,8 @@
 	--weight-title: 500;
 	--weight-text: 400;
 
+	scroll-behavior: smooth;
+
 }
 
 .page {
