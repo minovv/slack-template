@@ -210,6 +210,9 @@
 	flex-direction: column;
 	gap: calc(var(--dozen) * 2);
 	
+	/* to adjust the width of the cards and make them look equal just use */
+	flex: 1;
+	/* which is the shorthand for flex-grow: 1; flex-shrink: 1; flex-basis: 0%; */	
 }
 
 .card_image {
