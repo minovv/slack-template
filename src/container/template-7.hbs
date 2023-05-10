@@ -23,12 +23,35 @@
 	</div>	
 </section>
 
-<section class="hero">Hero</section>
-<section class="about">About</section>
+<section class="hero_block">
+	<div class="hero">
+		{{#with hero}}
+		<h1 class="hero_title">{{title}}</h1>
+		<p class="herp_text">{{description}}</p>
+		<a type="button" class="button hero_button" href="{{button.url}}">{{button.text}}</a>
+		{{/with}}
+	</div>
+</section>
+
+<section class="about_block">
+	<div class="about">
+		{{#with about}}
+		<h3 class="about_title">{{heading}}</h3>
+		<info class="inf_text">{{info}}</info>
+		{{/with}}
+	</div>	
+</section>
 		
 <main class="main">
 	<section class="articles">
-		<div class="articles_header">Our Articles</div>
+		<div class="articles_header">
+			<div>
+				<h2 class="articles_title">Our Articles</h2>
+			</div>
+			<div>
+				<a href="#" type="button button-outline" class="view_all">View All</a>
+			</div>			
+		</div>
 		<div class="articles_cards">Lorem ipsum</div>
 	</section>
 </main>
