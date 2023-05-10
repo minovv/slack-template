@@ -1,0 +1,42 @@
+<header class="header">
+			<div>
+			{{> logo}}
+			</div>
+			<nav class="header_nav">
+				<div class="header_nav_right">
+				{{!-- {{> nav list=header}} --}}
+				</div>			
+			</nav>
+</header>
+
+<section class="ads_section">
+	<div class="ads">	
+		{{#with header.ad}}
+		<div>
+			<span class="ads_logo">Ad</span>
+			<a href="{{url}}" class="ads_link">{{text}}</a>	
+	    {{/with}}
+		</div>
+		<div>
+		<span class="users_online">Users online: {{header.userOnline}}</span>
+		</div>
+	</div>	
+</section>
+
+<section class="hero">Hero</section>
+<section class="about">About</section>
+		
+<main class="main">
+	<section class="articles">
+		<div class="articles_header">Our Articles</div>
+		<div class="articles_cards">Lorem ipsum</div>
+	</section>
+</main>
+
+<footer class="footer">
+		<div>
+			{{> logo}}
+			<span class="footer_copyright">Copyright &copy; 2023-2024</span>
+		</div>
+</footer>
+	
