@@ -855,23 +855,28 @@ router.get('/template-7', function (req, res) {
 			links: [
 				{
 					url: "www.example.com",
-					text: "Home"
+					text: "Home",
+					isVertical: true,
 				},
 				{
 					url: "www.example.com/about",
-					text: "About Us"
+					text: "About Us",
+					isVertical: true,
 				},
 				{
 					url: "www.example.com/services",
-					text: "Services"
+					text: "Services",
+					isVertical: true,
 				},
 				{
 					url: "www.example.com/contact",
-					text: "Contact Us"
+					text: "Contact Us",
+					isVertical: true,
 				},
 				{
 					url: "www.example.com/blog",
-					text: "Blog"
+					text: "Blog",
+					isVertical: true,
 				}
 			]
 		},
