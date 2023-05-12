@@ -39,6 +39,7 @@
 
 	display: flex;
 	justify-content: center;
+	z-index: 0;
 
 }
 
@@ -260,7 +261,6 @@
 .articles_cards {
 	display: flex;
 	flex-wrap: wrap;
-	align-items: flex-start;
 	justify-content: space-between;
 	
 	gap: var(--space-m);
@@ -268,18 +268,20 @@
 
 .articles_cards > * {
 	flex: 1;
+	z-index: 1;
+	align-self: stretch;
 }
 
 .card {
-	color: var(--color-white);
-	max-width: 333px;
+	max-width: 330px;
 }
 
-
 .card_badge {
-	position: absolute;
-	top: 1000px;
-	left: 850px;
+	position: relative;
+	z-index: 2;
+	float: right;
+	bottom: 40px;
+	left: 45px;
 
 	text-transform: uppercase;
 	background-color: brown;
