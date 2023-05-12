@@ -129,15 +129,6 @@
 .footer_copyright {
 	font-size: var(--fontSizeS);
 	color: var(--color-text);
-	display: block;
-	margin-top: var(--space-l);
-}
-
-.footer_title {
-	font-size: var(--fontSizeL);
-	color: var(--color-title);
-	display: block;
-	margin-bottom: var(--space-l);
 }
 
 .main {
@@ -178,13 +169,15 @@
 }
 
 .hero_block {
+	display: flex;
+	flex-direction: column;
 	background: radial-gradient(100% 625% at 100% 100%, rgba(17, 24, 39, 0) 0%, rgba(78, 63, 146, 0.6) 100%);
 	padding: var(--space-xl) var(--space-l);
 	filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.1));
 	border-radius: 24px;
 
-	width: 1150px;
-	height: 300px;
+	max-width: 1150px;
+	max-height: 300px;
 }
 
 .hero_block > div {
@@ -220,7 +213,7 @@
 
 .button_outline {
 	color: var(--color-white);
-	border-color: var(--color-white);
+	border: solid 1px var(--color-white);
 	border-radius: var(--border-radius);
 	padding: var(--space-m) var(--space-l);
 	font-size: var(--fontSizeD);
@@ -248,4 +241,63 @@
 	color: var(--color-text);
 	font-size: var(--fontSizeD);
 	line-height: 170%;
+}
+
+.articles {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-xl);
+}
+
+.articles_header {
+	display: flex;	
+	justify-content: space-between;
+
+	color: var(--color-title);
+	font-size: var(--fontSizeXXL);
+}
+
+.card_image {
+	border-radius: calc(var(--border-radius) * 6);
+}
+
+.articles_cards {
+	display: flex;
+	flex-direction: row;
+	
+	gap: var(--space-m);
+
+	color: var(--color-white);
+}
+
+.card_badge {
+	position: absolute;
+	top: 1000px;
+	left: 850px;
+
+	text-transform: uppercase;
+	background-color: brown;
+	padding: 4px 6px;
+	border-radius: var(--border-radius);
+
+	font-size: var(--fontSizeD);
+}
+
+.card_name {
+	color: var(--color-title);
+	font-size: var(--fontSizeXL);
+	font-weight: var(--weight-title);
+	padding-top: var(--space-m);
+	padding-bottom: var(--space-m);
+}
+
+.card_description {
+	color: var(--color-text);
+	font-size: var(--fontSizeD);
+	line-height: 170%;
+	padding-bottom: var(--space-m);
+}
+
+.card_button {
+	border-radius: calc(var(--border-radius) * 2);
 }

@@ -43,14 +43,10 @@
 </section>
 		
 <main class="main">
-	<section class="articles">
+	<div class="articles">
 		<div class="articles_header">
-			<div>
-				<h2 class="articles_title">Our Articles</h2>
-			</div>
-			<div>
-				<a href="#" type="button" class="button-outline">View All</a>
-			</div>			
+			<h2 class="articles_title">Our Articles</h2>
+			<a type="button" class="button_outline" href="#">View All</a>
 		</div>
 		<div class="articles_cards">
 			{{#each articles}}
@@ -61,20 +57,19 @@
 				{{/if}}
 				<h3 class="card_name">{{name}}</h3>
 				<p class="card_description">{{description}}</p>
+				<a type="button" class="button card_button" href="#">Read All</a>
 			</div>
 			{{/each}}
 		</div>
-	</section>
+	</div>
 </main>
 
-<footer class="footer">
-		<div>
+<footer>
+		<div class="footer">
 			{{#each footer.pages}}
-			<a href="{{path}}" class="nav_footer">{{name}}</a>
-			{{/each}}			
-		</div>
-		<div>
-			<span class="footer_copyright">{{footer.copyright}}</span>
+			<a href="{{path}}" class="nav_link">{{name}}</a>
+			{{/each}}	
+			<span class="footer_copyright">{{footer.copyright}}</span>		
 		</div>
 </footer>
 	
