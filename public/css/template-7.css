@@ -293,6 +293,7 @@
 	left: 45px;
 
 	text-transform: uppercase;
+	color: var(--color-white);
 	background-color: brown;
 	padding: 4px 6px;
 	border-radius: var(--border-radius);
