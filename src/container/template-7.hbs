@@ -4,7 +4,7 @@
 			</div>
 			<nav class="header_nav">
 				<div class="header_nav_right">
-				{{!-- {{> nav list=header}} --}}
+					{{> nav list=header}}
 				</div>			
 			</nav>
 </header>
@@ -27,7 +27,7 @@
 	<div class="hero">
 		{{#with hero}}
 		<h1 class="hero_title">{{title}}</h1>
-		<p class="herp_text">{{description}}</p>
+		<p class="hero_text">{{description}}</p>
 		<a type="button" class="button hero_button" href="{{button.url}}">{{button.text}}</a>
 		{{/with}}
 	</div>
@@ -37,7 +37,7 @@
 	<div class="about">
 		{{#with about}}
 		<h3 class="about_title">{{heading}}</h3>
-		<info class="inf_text">{{info}}</info>
+		<p class="about_text">{{info}}</p>
 		{{/with}}
 	</div>	
 </section>
@@ -49,17 +49,32 @@
 				<h2 class="articles_title">Our Articles</h2>
 			</div>
 			<div>
-				<a href="#" type="button button-outline" class="view_all">View All</a>
+				<a href="#" type="button" class="button-outline">View All</a>
 			</div>			
 		</div>
-		<div class="articles_cards">Lorem ipsum</div>
+		<div class="articles_cards">
+			{{#each articles}}
+			<div class="card">
+				<img src="{{photo}}" alt="{{name}}" class="card_image" id="{{id}}">
+				{{#if isNew}}
+				<span class="card_badge">new</span>
+				{{/if}}
+				<h3 class="card_name">{{name}}</h3>
+				<p class="card_description">{{description}}</p>
+			</div>
+			{{/each}}
+		</div>
 	</section>
 </main>
 
 <footer class="footer">
 		<div>
-			{{> logo}}
-			<span class="footer_copyright">Copyright &copy; 2023-2024</span>
+			{{#each footer.pages}}
+			<a href="{{path}}" class="nav_footer">{{name}}</a>
+			{{/each}}			
+		</div>
+		<div>
+			<span class="footer_copyright">{{footer.copyright}}</span>
 		</div>
 </footer>
 	
