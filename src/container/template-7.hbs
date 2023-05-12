@@ -43,14 +43,19 @@
 </section>
 		
 <main class="main">
-	<div class="articles">
-		<div class="articles_header">
-			<h2 class="articles_title">Our Articles</h2>
-			<a type="button" class="button_outline" href="#">View All</a>
+	<div class="articles_header">
+			<div><h2 class="articles_title">Our Articles</h2></div>
+			<div><a type="button" class="button_outline" href="#">View All</a></div>
 		</div>
-		<div class="articles_cards">
+	<div class="articles">
+		
+		
+	</div>	
+</main>
+
+<div class="articles_cards">
 			{{#each articles}}
-			<div class="card">
+			<article class="card">
 				<img src="{{photo}}" alt="{{name}}" class="card_image" id="{{id}}">
 				{{#if isNew}}
 				<span class="card_badge">new</span>
@@ -58,11 +63,9 @@
 				<h3 class="card_name">{{name}}</h3>
 				<p class="card_description">{{description}}</p>
 				<a type="button" class="button card_button" href="#">Read All</a>
-			</div>
+				</article>
 			{{/each}}
 		</div>
-	</div>
-</main>
 
 <footer>
 		<div class="footer">
