@@ -260,6 +260,7 @@
 
 .articles_cards {
 	display: flex;
+	flex-direction: column;
 	flex-wrap: wrap;
 	justify-content: space-between;
 	
@@ -272,8 +273,15 @@
 	align-self: stretch;
 }
 
+@media (min-width: 750px) {
+	.articles_cards {
+		flex-direction: row;
+	}
+}
+
 .card {
 	max-width: 330px;
+	width: 80%;
 }
 
 .card_badge {
