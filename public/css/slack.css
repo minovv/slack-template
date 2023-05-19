@@ -1,4 +1,4 @@
-@layer component, variant;
+@layer normalize, component, variant;
 
 @font-face {
 	font-family: 'HelveticaNeueBold';
@@ -14,6 +14,7 @@ body {
 	--color-white: #ffffff;
 	--color-black: #000000;
 	--color-primary: #4a154b;
+	--color-light: #f4ede4;
 
 	--page-width-big: 1200px;
 	--page-width-medium: 1000px;
@@ -31,6 +32,9 @@ body {
 	--size-1: 14px;
 	--size-2: 18px;
 	--size-3: 22px;
+	--size-4: 26px;
+	--size-5: 30px;
+	--size-6: 34px;
 
 	--radius-1: 4px;
 
@@ -46,9 +50,11 @@ body {
 	display: grid;
 }
 
-.page_section {
-	display: flex;
-	justify-content: center;
+@layer component {
+	.page_section {
+		display: flex;
+		justify-content: center;
+	}
 }
 
 .page_content {
@@ -80,21 +86,29 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	
-	gap: 35px;
-	position: relative;
+	gap: 200px;
 
 	height: 60vh;
-	min-height: 400px;
+	min-height: 680px;
 }
 
 .hero {
-	display: grid;
+	display: flex;
 	gap: var(--spacing-5);
 	max-width: 425px;
 	height: 100%;
-	align-content: center;
+	align-items: center;
 
 	color: var(--color-black);
+}
+
+.hero_content {
+	display: grid;
+	gap: var(--spacing-5);
+	max-width: 425px;
+	color: var(--color-black);
+	position: relative;
+
 }
 
 .brands {
@@ -108,7 +122,8 @@ body {
 
 .hero_image {
 	position: absolute;
-	display: none;
+	left: 580px;
+	top: 0;
 }
 
 .hero_label {
@@ -134,19 +149,23 @@ body {
 	.button {
 		text-decoration: none;
 		color: var(--color-black);
-		padding: var(--spacing-4);
+		padding: var(--spacing-3);
 		border-radius: var(--radius-1);
 		text-align: center;
 		border: 1px solid transparent;
 		transition: opacity var(--transition-1);
 	}
 
-	.button:hover {
+	.click {
+		transition: opacity var(--transition-1);
+	}
+
+	.click:hover {
 		opacity: var(--opacity-1);
 		cursor: pointer;
 	}
 
-	.button:active {
+	.click:active {
 		opacity: var(--opacity-2);
 	}
 }
@@ -158,8 +177,65 @@ body {
 	}
 
 	.button_secondary {
-		color: #4a154b;
 		border-color: var(--color-primary);
+		color: var(--color-primary);		
 		border-width: 2px;
 	}
+}
+
+.features_section {
+	padding-top: 150px;
+	padding-bottom: 150px;
+
+	display: grid;
+	gap: var(--spacing-5);
+
+}
+
+@layer variant {
+	.page_section_light {
+		background-color: var(--color-light);
+	}
+}
+
+.features_title {
+	font-size: var(--size-6);
+}
+
+.feature_description {
+	font-size: var(--size-2);
+}
+
+.feat_card {
+	padding: var(--spacing-3);
+	background-color: var(--color-white);
+	display: grid;
+	gap: var(--spacing-3);
+}
+
+@layer component {
+	.icon {
+		display: block;
+		height: 48px;
+		width: 48px;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+}
+
+@layer variant {
+	.feat_icon {
+		height: 48px;
+		width: 48px;
+	}
+
+	.icon_arrow {
+		height: 14px;
+		width: 24px;
+		background-image: url('/svg/feature/arrow-right.svg');
+	}
+}
+
+.feat_link {
+	justify-self: flex-end;
 }
