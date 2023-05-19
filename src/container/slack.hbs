@@ -14,7 +14,7 @@
 		<meta name="msapplication-TileColor" content="#da532c">
 		<meta name="theme-color" content="#ffffff">
 
-		<link href='css/normalize.css' rel='stylesheet' />
+		{{!-- <link href='css/normalize.css' rel='stylesheet' /> --}}
 
 		<link href='css/slack.css' rel='stylesheet' />
 	</head>
@@ -26,16 +26,19 @@
 					<div class="hero_section">
 						
 						<div class="hero">
+							<div class="hero_content">
 							<span class="hero_label">Slack Features</span>
 							<h1 class="hero_title">One platform for your team and your work</h1>
 							<p class="hero_info">All the features of Slack work together so you can, too.</p>
-							<div class="hero_buttons">
-								<a href="#" class="button button_primary">Try for free</a>
-								<a href="#" class="button button_secondary">See all features</a>
+								<div class="hero_buttons">
+									<a href="#" class="button button_primary click">Try for free</a>
+									<a href="#" class="button button_secondary click">See all features</a>
+								</div>
+								<img src="/img/hero.png" alt="hero" class="hero_image">
 							</div>
 						</div>
 
-						<img src="/img/hero.png" alt="hero" class="hero_image">
+						
 						
 						<div class="brands">
 							<img src="/img/brands/airbnb.png" alt="airbnb" class="brands_image">
@@ -51,6 +54,63 @@
 					</div>
 				</div>
 			</section>
+
+			<section class="page_section page_section_light">
+				<div class="page_content features_section">
+					<h2 class="features_title">Work more easily with everyone</h2>
+					<p class="feature_description">Stay on the same page and make decisions faster by bringing all of your  work communication into one place</p>
+					
+					<div class="feat_card">
+						<span class="icon feat_icon" style="background-image: url('/svg/feature/connect.svg');"></span>
+						<strong class="feat_card_title">Slack Connect</strong>
+						<p class="feat_card_description">Collaborate with teams at other companies the same way you do with teams at your own.</p>
+						<a href="#" class="icon icon_arrow click feat_link"></a>
+					</div>
+
+					<div class="feat_card">
+						<span class="icon feat_icon" style="background-image: url('/svg/feature/channels.svg');"></span>
+						<strong class="feat_card_title">Channels</strong>
+						<p class="feat_card_description"></p>
+						<a href="#" class="icon icon_arrow click feat_link"></a>
+					</div>
+
+					<div class="feat_card">
+						<span class="icon feat_icon" style="background-image: url('/svg/feature/huddles.svg');"></span>
+						<strong class="feat_card_title">Huddles</strong>
+						<p class="feat_card_description"></p>
+						<a href="#" class="icon icon_arrow click feat_link"></a>
+					</div>
+
+					<div class="feat_card">
+						<span class="icon feat_icon" style="background-image: url('/svg/feature/clips.svg');"></span>
+						<strong class="feat_card_title">Clips</strong>
+						<p class="feat_card_description"></p>
+						<a href="#" class="icon icon_arrow click feat_link"></a>
+					</div>
+
+					<div class="feat_card">
+						<span class="icon feat_icon" style="background-image: url('/svg/feature/canvas.svg');"></span>
+						<strong class="feat_card_title">Canvas</strong>
+						<p class="feat_card_description"></p>
+						<a href="#" class="icon icon_arrow click feat_link"></a>
+					</div>
+
+					<div class="feat_card">
+						<span class="icon feat_icon" style="background-image: url('/svg/feature/messaging.svg');"></span>
+						<strong class="feat_card_title">Messaging</strong>
+						<p class="feat_card_description"></p>
+						<a href="#" class="icon icon_arrow click feat_link"></a>
+					</div>
+
+					<div class="feat_card">
+						<span class="icon feat_icon" style="background-image: url('/svg/feature/accessibility.svg');"></span>
+						<strong class="feat_card_title">Accessibility</strong>
+						<p class="feat_card_description"></p>
+						<a href="#" class="icon icon_arrow click feat_link"></a>
+					</div>
+				</div>
+			</section>
+
 		</div>
 	</body>
 
