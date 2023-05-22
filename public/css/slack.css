@@ -1,8 +1,79 @@
-@layer normalize, component, variant;
+@layer normalize, component, variant, main, adaptive;
 
 @font-face {
 	font-family: 'HelveticaNeueBold';
 	src: url('/font/HelveticaNeueBold.ttf');
+}
+
+
+@layer component {
+	.page_section {
+		display: flex;
+		justify-content: center;
+	}
+
+	.button {
+		text-decoration: none;
+		color: var(--color-black);
+		padding: var(--spacing-3);
+		border-radius: var(--radius-1);
+		text-align: center;
+		border: 1px solid transparent;
+		transition: opacity var(--transition-1);
+	}
+
+	.click {
+		transition: opacity var(--transition-1);
+	}
+
+	.click:hover {
+		opacity: var(--opacity-1);
+		cursor: pointer;
+	}
+
+	.click:active {
+		opacity: var(--opacity-2);
+	}
+
+	.double_line {
+		line-height: var(--line-height);
+	}
+
+	.icon {
+		display: block;
+		height: 48px;
+		width: 48px;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+}
+
+@layer variant {
+	.button_primary {
+		color: var(--color-white);
+		background-color: var(--color-primary);
+	}
+
+	.button_secondary {
+		border-color: var(--color-primary);
+		color: var(--color-primary);		
+		border-width: 2px;
+	}
+
+	.feat_icon {
+		height: 48px;
+		width: 48px;
+	}
+
+	.icon_arrow {
+		height: 14px;
+		width: 24px;
+		background-image: url('/svg/feature/arrow-right.svg');
+	}
+
+	.page_section_light {
+		background-color: var(--color-light);
+	}
 }
 
 body {
@@ -42,19 +113,16 @@ body {
 	--opacity-2: 0.3;
 	--transition-1: 0.7s;
 
+	--line-height: 1.5;
+
 	scroll-behavior: smooth;
 	
 }
 
+@layer main {
+
 .page {
 	display: grid;
-}
-
-@layer component {
-	.page_section {
-		display: flex;
-		justify-content: center;
-	}
 }
 
 .page_content {
@@ -63,23 +131,7 @@ body {
 	padding: var(--spacing-3);
 }
 
-@media all and (1260px <= width) {
-	.page_content {
-		max-width: var(--page-width-big);
-	}
-}
 
-@media all and (1000 <= width < 1260px) {
-	.page_content {
-		max-width: var(--page-width-medium);
-	}
-}
-
-@media all and (width < 1000px) {
-	.page_content {
-		max-width: var(--page-width-small);
-	}
-}
 
 .hero_section {
 	display: flex;
@@ -88,8 +140,7 @@ body {
 	
 	gap: 200px;
 
-	height: 60vh;
-	min-height: 680px;
+	min-height: 600px;
 }
 
 .hero {
@@ -98,8 +149,7 @@ body {
 	max-width: 425px;
 	height: 100%;
 	align-items: center;
-
-	color: var(--color-black);
+	margin-top: 50px;
 }
 
 .hero_content {
@@ -114,7 +164,7 @@ body {
 .brands {
 	display: flex;
 	align-items: center;
-	justify-content: space-evenly;
+	justify-content: center;
 	column-gap: var(--spacing-8);
 	row-gap: var(--spacing-4);
 	flex-wrap: wrap;
@@ -123,7 +173,7 @@ body {
 .hero_image {
 	position: absolute;
 	left: 580px;
-	top: 0;
+	top:0;
 }
 
 .hero_label {
@@ -145,43 +195,7 @@ body {
 	gap: var(--spacing-5);
 }
 
-@layer component {
-	.button {
-		text-decoration: none;
-		color: var(--color-black);
-		padding: var(--spacing-3);
-		border-radius: var(--radius-1);
-		text-align: center;
-		border: 1px solid transparent;
-		transition: opacity var(--transition-1);
-	}
 
-	.click {
-		transition: opacity var(--transition-1);
-	}
-
-	.click:hover {
-		opacity: var(--opacity-1);
-		cursor: pointer;
-	}
-
-	.click:active {
-		opacity: var(--opacity-2);
-	}
-}
-
-@layer variant {
-	.button_primary {
-		color: var(--color-white);
-		background-color: var(--color-primary);
-	}
-
-	.button_secondary {
-		border-color: var(--color-primary);
-		color: var(--color-primary);		
-		border-width: 2px;
-	}
-}
 
 .features_section {
 	padding-top: 150px;
@@ -190,13 +204,12 @@ body {
 	display: grid;
 	gap: var(--spacing-5);
 
+	background-image: url('/svg/feature/easy.svg');
+	background-repeat: no-repeat;
+	background-position: top right;
+
 }
 
-@layer variant {
-	.page_section_light {
-		background-color: var(--color-light);
-	}
-}
 
 .features_title {
 	font-size: var(--size-6);
@@ -204,6 +217,7 @@ body {
 
 .feature_description {
 	font-size: var(--size-2);
+	max-width: 520px;
 }
 
 .feat_card {
@@ -211,31 +225,92 @@ body {
 	background-color: var(--color-white);
 	display: grid;
 	gap: var(--spacing-3);
+
+	font-size: var(--size-2);
+
+	grid-template-rows: min-content min-content 1fr min-content;
 }
 
-@layer component {
-	.icon {
-		display: block;
-		height: 48px;
-		width: 48px;
-		background-repeat: no-repeat;
-		background-position: center;
-	}
-}
-
-@layer variant {
-	.feat_icon {
-		height: 48px;
-		width: 48px;
-	}
-
-	.icon_arrow {
-		height: 14px;
-		width: 24px;
-		background-image: url('/svg/feature/arrow-right.svg');
-	}
-}
 
 .feat_link {
 	justify-self: flex-end;
 }
+
+.features_grid_4 {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+
+	gap: var(--spacing-3);
+}
+
+.features_grid_4 > .feat_card:first-of-type {
+	grid-row: 1 / 3;	
+}
+}
+
+@layer adaptive {
+	@media all and (1260px <= width) {
+		.page_content {
+			max-width: var(--page-width-big);
+		}
+	}
+	
+	@media all and (1000 <= width < 1260px) {
+		.page_content {
+			max-width: var(--page-width-medium);
+		}
+
+		.hero_image {
+			left: 518px;
+			height: 300px;
+		}
+	}
+	
+	@media all and (width < 1000px) {
+		.page_content {
+			max-width: var(--page-width-small);
+		}
+
+		.hero_image {
+			position: static;
+			width: 100%;
+			order: -1;
+		}
+
+		.hero_content {
+			max-width: 100%;
+		}
+
+		.features_grid_4 {
+			grid-template-columns: repeat(3, 1fr);
+		}
+
+		.features_grid_4 > .feat_card:first-of-type {
+			grid-row: 1 / 3;	
+		}
+
+		.features_section {
+			background-image: none;
+		}
+	}
+
+	@media all and (width < 600px) {
+		.features_grid_4 {
+			grid-template-columns: 2fr 2fr;
+		}
+	}
+
+	@media all and (width < 400px) {
+		.features_grid_4 {
+			grid-template-columns: 1fr;
+		}
+
+		.hero_buttons {
+			grid-template-columns: 1fr;
+			gap: var(--spacing-2);
+		}
+	}
+
+}
+
