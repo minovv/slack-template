@@ -71,6 +71,7 @@
 		background-image: url('/svg/feature/arrow-right.svg');
 	}
 
+	
 	.page_section_light {
 		background-color: var(--color-light);
 	}
@@ -248,7 +249,7 @@ body {
 }
 
 .tools_section {
-	padding-top: 150px;
+	padding-top: 70px;
 	padding-bottom: 150px;
 
 	display: grid;
@@ -260,13 +261,18 @@ body {
 
 }
 
+.tools_heading {
+	margin-left: 550px;
+	padding-bottom: 100px;;	
+}
+
 .tools_title {
-	justify-self: flex-end;
 	font-size: var(--size-6);
+	padding-bottom: var(--spacing-3);
+	
 }
 
 .tools_description {
-	justify-self: flex-end;
 	font-size: var(--size-2);
 	max-width: 520px;
 }
@@ -277,6 +283,7 @@ body {
 	grid-template-rows: repeat(2, 1fr);
 
 	gap: var(--spacing-3);
+	margin-left: 300px;
 }
 
 .features_grid_3 > .feat_card:first-of-type {
@@ -289,16 +296,17 @@ body {
 
 .testimonial_section {
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
+	flex-direction: row;
+	justify-content: space-between;
 }
 
 .testimonial_card {
 	display: flex;
+	flex-direction: row;
 	gap: var(--spacing-5);
 	max-width: 1020px;
 	height: 100%;
-	align-items: center;
+	align-items: flex-end;
 	margin-top: 50px;
 	margin-left: 300px;
 }
@@ -316,35 +324,73 @@ body {
 	font-size: var(--size-2);
 }
 
-.explore_title {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	font-size: var(--size-6);
-	padding-top: 100px;
-	padding-bottom: 80px;
-}
-
 .explore_section {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 }
 
-.explore_cards {
+.explore_title {
+	display: flex;	
+	justify-content: center;
+	
+	font-size: var(--size-6);
+	padding-top: 100px;
+	padding-bottom: 80px;
+}
+
+
+.explore_cards	{
 	display: flex;
 	flex-direction: row;
-	justify-content: space-evenly;
+	justify-content: space-between;
+	justify-self: center;
+	flex-wrap: wrap;
+	flex: 1;	
 }
 
 .ex_card {
-	max-width: 333px;
+	display: flex;
+	flex-direction: column;
+	
+	align-self: normal;
 }
+
+.ex_card > div {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;	
+	max-width: 300px;
+}
+
+.lm {
+	margin-top: auto;
+}
+
+
 
 .card_title {
 	font-size: var(--size-4);
-	max-width: 333px;
+	max-width: 280px;
+	padding-top: 20px;
+	padding-bottom: 50px;	
 
+}
+
+.ex_card * h4 {
+	font-size: var(--size-1);
+}
+
+.h5 {
+	text-transform: uppercase;
+	color: #1264A3;
+	text-decoration: none;
+}
+
+
+.ex_card > img {
+	padding-top: 8px;
+	padding-bottom: 8px;
 }
 
 }
@@ -393,6 +439,11 @@ body {
 		.features_section {
 			background-image: none;
 		}
+
+		.testimonial_img {
+			display: none;
+		}
+
 	}
 
 	@media all and (width < 600px) {
